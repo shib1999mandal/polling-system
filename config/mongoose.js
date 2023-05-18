@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 // mongoDB atlas uri
-const URI =
-  "mongodb+srv://shiba1999mandal:QtGXxdhDLug86SMF@cluster0.5m8y9l8.mongodb.net/?retryWrites=true&w=majority";
-
+// const URI =
+  // "mongodb+srv://shiba1999mandal:shibaram123@cluster0.nzaswbq.mongodb.net/poling-system?retryWrites=true&w=majority";
+  mongoose.connect(process.env.MONGO_URI);
 // connecting to mongoDB atlas
 const connectDB = async () => {
-  await mongoose.connect(URI, {
+  await mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

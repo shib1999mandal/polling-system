@@ -1,9 +1,11 @@
 //initialize port
-
+require('dotenv').config();
 //import
 const express = require("express");
 const connectDB = require("./config/mongoose");
+const hostName='0.0.0.0';
 const port = process.env.PORT || 8080;
+
 const app = express();
 connectDB();
 
